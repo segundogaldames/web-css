@@ -1,0 +1,47 @@
+label{
+	display: block;
+	margin-bottom: 10px;
+}
+input, select{
+	height: 30px;
+}
+textarea{
+	resize: none;
+}
+.btn{
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 0px solid #000000;
+}
+.btn-primary{
+	background-color: #04A4FA;
+	color: #fff;
+}
+.btn-primary:hover{
+	background-color: #68C6F9;
+}
+.content-form{
+	width: 50%;
+	margin-left: 12%;
+}
+.form-control{
+	width: 100%;
+}
+.form-group{
+	margin: 10px;
+}
+.text-danger{
+	color: #FC2208;
+}
+
+
+
+
+
+
+
+
+

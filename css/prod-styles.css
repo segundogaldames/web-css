@@ -1,0 +1,26 @@
+img{
+	height: 140px;
+}
+hr{
+	width: 90%;
+}
+.content-prod{
+	width: 100%;
+	float: left;
+}
+.img-prod{
+	width: 275px;
+	float: left;
+	text-align: center;
+	margin: 10px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 1px solid #03096F;
+	padding: 5px;
+}
+.precio{
+	color: #03096F;
+	font-style: italic;
+	font-size: 20px;
+}

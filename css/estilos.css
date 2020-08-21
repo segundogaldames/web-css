@@ -10,10 +10,15 @@ footer{
 	background-color: #706F71;
 	height: 50px;
 }
-h3{
-	font-size: 28px;
+h3, h4{
 	font-weight: bold;
 	text-align: center;
+}
+h3{
+	font-size: 28px;
+}
+h4{
+	font-size: 22px;	
 }
 header{
 	background-color: #ADABAF; 
