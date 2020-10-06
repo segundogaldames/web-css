@@ -94,7 +94,12 @@ nav ul li a:hover{
 	margin-top: 20px;
 	margin-right: 20px;
 }
+.text-saludo{
+	color: #757CF5;
+	font-size: 26px;
+}
 .video-quienes{
 	margin-top: 50px;
 	text-align: center;
 }
+

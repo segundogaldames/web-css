@@ -9,7 +9,53 @@
 	<link rel="stylesheet" type="text/css" href="css/form-styles.css">
 	
 	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-	<script type="text/javascript" src="js/funciones.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#form").validate({
+				rules: {
+					nombre: {
+						required: true,
+						minlength: 5
+					},
+					email: {
+						required: true,
+						email: true
+					},
+					fecha: {
+						required: true
+					},
+					comuna: {
+						required: true
+					},
+					comentarios: {
+						required: true,
+						minlength: 5
+					}
+				},
+				messages: {
+					nombre: {
+						required: "El nombre es obligatorio",
+						minlength: "Debe ingresar al menos 5 caracteres"
+					},
+					email: {
+						required: "El email es obligatorio",
+						email: "El email no es correcto"
+					},
+					fecha: {
+						required: "La fecha de nacimiento es obligatoria"
+					},
+					comuna: {
+						required: "Seleccione una comuna"
+					},
+					comentarios: {
+						required: "Ingrese un comentario",
+						minlength: "Debe ingresar al menos 5 caracteres"
+					}
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<header>
@@ -37,24 +83,24 @@
 		</aside>
 		<div class="content-right">
 			<div class="content-form">
-				<form action="mensaje.html" method="post" name="form">
+				<form id="form" action="mensaje.html" method="post">
 					<h3>Formulario de contacto</h3>
 					<p class="text-danger" style="margin-top: 5px">* Campos obligatorios</p>
 					<div class="form-group">
 						<label>Nombre <span class="text-danger">*</span></label>
-						<input type="text" name="nombre" placeholder="Ingresa tu nombre" class="form-control">
+						<input id="nombre" type="text" name="nombre" placeholder="Ingresa tu nombre" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Email <span class="text-danger">*</span></label>
-						<input type="email" name="email" placeholder="Ingresa tu correo electrónico" class="form-control">
+						<input id="email" type="email" name="email" placeholder="Ingresa tu correo electrónico" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Fecha de nacimiento</label>
-						<input type="date" name="fecha" class="form-control">
+						<input id="fecha" type="date" name="fecha" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label>Comuna de residencia <span class="text-danger">*</span></label>
-						<select name="comuna" class="form-control">
+						<select id="comuna" name="comuna" class="form-control" required>
 							<option value="">Seleccione...</option>
 							<option value="stgo">Santiago</option>
 							<option value="ecentral">Estación Central</option>
@@ -65,10 +111,10 @@
 					</div>
 					<div class="form-group">
 						<label>Comentarios <span class="text-danger">*</span></label>
-						<textarea name="comentarios" placeholder="Ingresa tu comentario" class="form-control" rows="6"></textarea>
+						<textarea id="comentarios" name="comentarios" placeholder="Ingresa tu comentario" class="form-control" rows="6" required></textarea>
 					</div>
 					<div class="form-group">
-						<button type="button" class="btn btn-primary" onclick="validar();">Guardar</button>
+						<input type="submit" value="Enviar">
 					</div>
 				</form>
 			</div>
